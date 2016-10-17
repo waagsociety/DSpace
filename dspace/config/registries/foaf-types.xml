@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+
+<!--
+  - foaf-types.xml
+  -
+  - Version:  $Revision$
+  -
+  - Date:     $Date$
+  -
+  - W3C ADMS
+  -
+  - <dc-type>
+  -   <schema></schema>
+  -   <element></element>
+  -
+  -   <scope_note></scope_note>
+  - </dc-type>
+  -->
+
+<!-- start of XML -->
+
+<dspace-dc-types>
+
+  <dspace-header>
+    <title>FOAF CORE Types Registry</title>
+    <contributor.author>Stefano Bocconi</contributor.author>
+    <date.created>$Date$</date.created>
+    <description>$Log$</description>
+    <description.version>$Revision$</description.version>
+  </dspace-header>
+
+  <dc-schema>
+          <name>foaf</name>
+          <namespace>http://xmlns.com/foaf/0.1/</namespace>
+  </dc-schema>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>name</element>
+    <scope_note>The name of something is a simple textual string.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>img</element>
+    <scope_note>The img property relates a Person to a Image that represents them.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>depiction</element>
+    <scope_note>The depiction property is a relationship between a thing and an Image that depicts it. As such it is an inverse of the depicts relationship.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>depicts</element>
+    <scope_note>The depicts property is a relationship between a Image and something that the image depicts. As such it is an inverse of the depiction relationship.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>familyName</element>
+    <scope_note>The familyName property is provided (alongside givenName) for use when describing parts of people's names. Although these concepts do not capture the full range of personal naming styles found world-wide, they are commonly used and have some value.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>givenName</element>
+    <scope_note>The givenName property is provided (alongside familyName) for use when describing parts of people's names. Although these concepts do not capture the full range of personal naming styles found world-wide, they are commonly used and have some value.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>knows</element>
+    <scope_note>The knows property relates a Person to another Person that he or she knows.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>based_near</element>
+    <scope_note>The based_near relationship relates two "spatial things" (anything that can be somewhere), the latter typically described using the geo:lat / geo:long geo-positioning vocabulary.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>age</element>
+    <scope_note>The age property is a relationship between a Agent and an integer string representing their age in years.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>made</element>
+    <scope_note>The made property relates a Agent to something made by it. As such it is an inverse of the maker property, which relates a thing to something that made it.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>maker</element>
+    <scope_note>The maker property relates something to a Agent that made it. As such it is an inverse of the made property.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>primaryTopic</element>
+    <scope_note>The primaryTopic property relates a document to the main thing that the document is about.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>primaryTopicOf</element>
+    <scope_note>The isPrimaryTopicOf property relates something to a document that is mainly about it.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>member</element>
+    <scope_note>The member property relates a Group to a Agent that is a member of that group.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>foaf</schema>
+    <element>homepage</element>
+    <scope_note>The homepage property relates something to a homepage about it.</scope_note>
+  </dc-type>
+
+</dspace-dc-types>

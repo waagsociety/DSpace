@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+
+<!--
+  - rdfs-types.xml
+  -
+  - Version:  $Revision$
+  -
+  - Date:     $Date$
+  -
+  - W3C ADMS
+  -
+  - <dc-type>
+  -   <schema></schema>
+  -   <element></element>
+  -
+  -   <scope_note></scope_note>
+  - </dc-type>
+  -->
+
+<!-- start of XML -->
+
+<dspace-dc-types>
+
+  <dspace-header>
+    <title>RDFS Types Registry</title>
+    <contributor.author>Stefano Bocconi</contributor.author>
+    <date.created>$Date$</date.created>
+    <description>$Log$</description>
+    <description.version>$Revision$</description.version>
+  </dspace-header>
+
+  <dc-schema>
+          <name>rdfs</name>
+          <namespace>http://www.w3.org/2000/01/rdf-schema</namespace>
+  </dc-schema>
+
+  <dc-type>
+	<schema>rdfs</schema>
+    <element>range</element>
+    <scope_note>rdfs:range is an instance of rdf:Property that is used to state that the values of a property are instances of one or more classes.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>rdfs</schema>
+    <element>domain</element>
+    <scope_note>rdfs:domain is an instance of rdf:Property that is used to state that any resource that has a given property is an instance of one or more classes.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>rdfs</schema>
+    <element>subClassOf</element>
+    <scope_note>The property rdfs:subClassOf is an instance of rdf:Property that is used to state that all the instances of one class are instances of another.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>rdfs</schema>
+    <element>subPropertyOf</element>
+    <scope_note>The property rdfs:subPropertyOf is an instance of rdf:Property that is used to state that all resources related by one property are also related by another.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>rdfs</schema>
+    <element>label</element>
+    <scope_note>rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>rdfs</schema>
+    <element>comment</element>
+    <scope_note>rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>rdfs</schema>
+    <element>seeAlso</element>
+    <scope_note>rdfs:seeAlso is an instance of rdf:Property that is used to indicate a resource that might provide additional information about the subject resource.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>rdfs</schema>
+    <element>isDefinedBy</element>
+    <scope_note>rdfs:isDefinedBy is an instance of rdf:Property that is used to indicate a resource defining the subject resource. This property may be used to indicate an RDF vocabulary in which a resource is described.</scope_note>
+  </dc-type>
+
+</dspace-dc-types>

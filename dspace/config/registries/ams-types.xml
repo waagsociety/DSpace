@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+<!--
+  - ams-types.xml
+  -
+  - Version:  $Revision$
+  -
+  - Date:     $Date$
+  -
+  - W3C ADMS
+  -
+  - <dc-type>
+  -   <schema></schema>
+  -   <element></element>
+  -
+  -   <scope_note></scope_note>
+  - </dc-type>
+  -->
+
+<!-- start of XML -->
+
+<dspace-dc-types>
+
+  <dspace-header>
+    <title>AMS Types Registry</title>
+    <contributor.author>Stefano Bocconi</contributor.author>
+    <date.created>$Date$</date.created>
+    <description>$Log$</description>
+    <description.version>$Revision$</description.version>
+  </dspace-header>
+
+  <dc-schema>
+          <name>ams</name>
+          <namespace>http://purl.org/ams/1.0/</namespace>
+  </dc-schema>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>fieldDescription</element>
+    <scope_note>Description of the field in the dataset.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>fieldLabel</element>
+    <scope_note>Label of the field in the dataset.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>fieldUnit</element>
+    <scope_note>Unit of the field in the dataset.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>relatedProject</element>
+    <scope_note>The project(s) that used this dataset.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>theme</element>
+    <scope_note>The AMS theme(s) to which this dataset could be related. Can be more than one. Themes are prefixed: “Connected City”, “Vital City”, “Circular City”.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>subtheme</element>
+    <scope_note>The AMS subtheme(s) to which this dataset could be related. Can be more than one.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>temporalRepresentationType</element>
+    <scope_note>Specifies whether the data represents the spatial data in time. Can be ‘dynamic’ (variation in time) or ‘static’ (no time involved).</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>temporalResolution</element>
+    <scope_note>The time interval or level of detail in the time dimension. The value domain of this element is free text.</scope_note>
+  </dc-type>
+
+
+</dspace-dc-types>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<!--
+  - adms-types.xml
+  -
+  - Version:  $Revision$
+  -
+  - Date:     $Date$
+  -
+  - W3C ADMS
+  -
+  - <dc-type>
+  -   <schema></schema>
+  -   <element></element>
+  -
+  -   <scope_note></scope_note>
+  - </dc-type>
+  -->
+
+<!-- start of XML -->
+
+<dspace-dc-types>
+
+  <dspace-header>
+    <title>ADMS Types Registry</title>
+    <contributor.author>Stefano Bocconi</contributor.author>
+    <date.created>$Date$</date.created>
+    <description>$Log$</description>
+    <description.version>$Revision$</description.version>
+  </dspace-header>
+
+  <dc-schema>
+          <name>adms</name>
+          <namespace>http://www.w3.org/ns/adms</namespace>
+  </dc-schema>
+
+  <dc-type>
+	<schema>adms</schema>
+    <element>includedAsset</element>
+    <scope_note>An Asset that is contained in the Asset being described.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>adms</schema>
+    <element>translation</element>
+    <scope_note>Translation of the Asset.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>adms</schema>
+    <element>versionNotes</element>
+    <scope_note>Description of changes between this version and the previous version of the Asset.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>adms</schema>
+    <element>representationTechnique</element>
+    <scope_note>Language in which the Distribution is expressed, using a controlled vocabulary. Note: this is different from the file format, e.g. a ZIP file (file format) could contain an XML schema (representation technique).</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>adms</schema>
+    <element>status</element>
+    <scope_note>Status of the Distribution in the context of a particular workflow process, using a controlled vocabulary.</scope_note>
+  </dc-type>
+
+</dspace-dc-types>

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<!--
+  - ngeo-types.xml
+  -
+  - Version:  $Revision$
+  -
+  - Date:     $Date$
+  -
+  - W3C ADMS
+  -
+  - <dc-type>
+  -   <schema></schema>
+  -   <element></element>
+  -
+  -   <scope_note></scope_note>
+  - </dc-type>
+  -->
+
+<!-- start of XML -->
+
+<dspace-dc-types>
+
+  <dspace-header>
+    <title>NGEO Types Registry</title>
+    <contributor.author>Stefano Bocconi</contributor.author>
+    <date.created>$Date$</date.created>
+    <description>$Log$</description>
+    <description.version>$Revision$</description.version>
+  </dspace-header>
+
+  <dc-schema>
+          <name>ngeo</name>
+          <namespace>http://geovocab.org/geometry</namespace>
+  </dc-schema>
+
+  <dc-type>
+	<schema>ngeo</schema>
+    <element>bbox</element>
+    <scope_note>Relates a Geometry to its Bounding Box.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ngeo</schema>
+    <element>boundary</element>
+    <scope_note>Super-property that groups all properties defining a polygon's boundaries.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ngeo</schema>
+    <element>exterior</element>
+    <scope_note>Defines a polygon's outer boundary.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ngeo</schema>
+    <element>geometry</element>
+    <scope_note>Relates a resource to its geometric shape.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ngeo</schema>
+    <element>interior</element>
+    <scope_note>Defines an polygon's boundary within its outer boundary, i.e. a polygon with 'holes' in it.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ngeo</schema>
+    <element>lineStringmember</element>
+    <scope_note>Links a LineString simple geometry to a MultiLineString composite geometry.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ngeo</schema>
+    <element>partOf</element>
+    <scope_note>Relates a point to a geometric shape's boundary.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ngeo</schema>
+    <element>pointMember</element>
+    <scope_note>Links a Point simple geometry to a MultiPoint composite Geometry.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ngeo</schema>
+    <element>polygonMember</element>
+    <scope_note>Links a Polygon simple geometry to a MultiPolygon composite geometry.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ngeo</schema>
+    <element>posList</element>
+    <scope_note>Relates a LineString or LinearRing to the points that define them.</scope_note>
+  </dc-type>
+
+</dspace-dc-types>
