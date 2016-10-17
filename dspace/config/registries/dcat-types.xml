@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+
+<!--
+  - dcat-types.xml
+  -
+  - Version:  $Revision$
+  -
+  - Date:     $Date$
+  -
+  - W3C DCAT
+  -
+  - <dc-type>
+  -   <schema></schema>
+  -   <element></element>
+  -
+  -   <scope_note></scope_note>
+  - </dc-type>
+  -->
+
+<!-- start of XML -->
+
+<dspace-dc-types>
+
+  <dspace-header>
+    <title>DCAT Types Registry</title>
+    <contributor.author>Stefano Bocconi</contributor.author>
+    <date.created>$Date$</date.created>
+    <description>$Log$</description>
+    <description.version>$Revision$</description.version>
+  </dspace-header>
+
+  <dc-schema>
+          <name>dcat</name>
+          <namespace>http://www.w3.org/ns/dcat</namespace>
+  </dc-schema>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>accessURL</element>
+    <scope_note>Could be any kind of URL that gives access to a distribution of the dataset. E.g. landing page, download, feed URL, SPARQL endpoint. Use when your catalog does not have information on which it is or when it is definitely not a download.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>contactPoint</element>
+    <scope_note>Link a dataset to relevant contact information which is provided using VCard.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>distribution</element>
+    <scope_note>Connects a dataset to its available distributions.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>downloadURL</element>
+    <scope_note>A file that contains the distribution of the dataset in a given format.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>record</element>
+    <scope_note>A catalog record that is part of the catalog.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>themeTaxonomy</element>
+    <scope_note>The knowledge organization system (KOS) used to classify catalog's datasets.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>byteSize</element>
+    <scope_note>The size of a distribution in bytes.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>keyword</element>
+    <scope_note>A keyword or tag describing the dataset.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>mediaType</element>
+    <scope_note>The media type of the distribution as defined by IANA.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>dataset</element>
+    <scope_note>A dataset that is part of the catalog.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>theme</element>
+    <scope_note>The main category of the dataset. A dataset can have multiple themes.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcat</schema>
+    <element>landingPage</element>
+    <scope_note>A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information.</scope_note>
+  </dc-type>
+
+</dspace-dc-types>
