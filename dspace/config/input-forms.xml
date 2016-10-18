@@ -513,7 +513,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-element>type</dc-element>
           <dc-qualifier>spatialDataServiceType</dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Temporal resolution</label>
+          <label>Spatial data service type</label>
           <input-type value-pairs-name="temporal_resolution">dropdown</input-type>
           <hint>The type of data service. Mandatory if the 'Resource type' is equal to 'Spatial data service'.
             One has to select a type of service from the predefined list of service types defined by INSPIRE.</hint>
@@ -576,7 +576,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
           <label>Data custodian</label>
-          <input-type>textArea</input-type>
+          <input-type>textarea</input-type>
           <hint>The party or person, and its contact information, that specified the metadata information of this data. The value domain of this element is free text and should contain name, email and phone number.</hint>
           <required>yes</required>
         </field>
@@ -587,7 +587,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
           <label>Data creator</label>
-          <input-type>textArea</input-type>
+          <input-type>textarea</input-type>
           <hint>The party or person, and its contact information, that was or still is responsible for the creation of the data. The value domain of this element is free text and should contain name, email and phone number.</hint>
           <required>yes</required>
         </field>
@@ -598,7 +598,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
           <label>Data creator</label>
-          <input-type>textArea</input-type>
+          <input-type>textarea</input-type>
           <hint>The party or person, and its contact information, that provides access and usage of the data. The value domain of this element is free text and should contain name, email and phone number.</hint>
           <required>yes</required>
         </field>
@@ -609,7 +609,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
           <label>Other parties</label>
-          <input-type>textArea</input-type>
+          <input-type>textarea</input-type>
           <hint>Other parties that are somehow related to this data. They could for example be the producers or funders for this data. For each party, its role and contact information should be given. The value domain of this element is free text.</hint>
           <required></required>
         </field>
