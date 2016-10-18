@@ -55,7 +55,19 @@
   <dc-type>
 	<schema>ams</schema>
     <element>relatedProject</element>
-    <scope_note>The project(s) that used this dataset.</scope_note>
+    <scope_note>The project(s) related to this dataset or paper.</scope_note>
+  </dc-type>
+
+  <dc-type>
+  <schema>ams</schema>
+    <element>relatedPaper</element>
+    <scope_note>The papers(s) related to this dataset.</scope_note>
+  </dc-type>
+
+  <dc-type>
+  <schema>ams</schema>
+    <element>relatedDataset</element>
+    <scope_note>The dataset(s) related to this paper or project.</scope_note>
   </dc-type>
 
   <dc-type>
