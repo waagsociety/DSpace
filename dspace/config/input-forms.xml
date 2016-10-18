@@ -255,6 +255,17 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>type</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Type of item (predefined)</label>
+          <input-type value-pairs-name="project_type">dropdown</input-type>
+          <hint>Predefined field</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
           <dc-schema>dcat</dc-schema>
           <dc-element>landingPage</dc-element>
           <dc-qualifier></dc-qualifier>
@@ -324,6 +335,17 @@ it, please enter the types and the actual numbers or codes.</hint>
           <input-type>onebox</input-type>
           <hint>If the item has any alternative titles, please enter them here.</hint>
           <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>type</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Type of item (predefined)</label>
+          <input-type value-pairs-name="paper_type">dropdown</input-type>
+          <hint>Predefined field</hint>
+          <required>yes</required>
         </field>
 
         <field>
@@ -1155,6 +1177,21 @@ it, please enter the types and the actual numbers or codes.</hint>
       </pair>
    </value-pairs>
 
+   <value-pairs value-pairs-name="paper_type" dc-term="type">
+     <pair>
+       <displayed-value>Paper</displayed-value>
+       <stored-value>paper</stored-value>
+      </pair>
+     <pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="project_type" dc-term="type">
+     <pair>
+       <displayed-value>Project</displayed-value>
+       <stored-value>project</stored-value>
+      </pair>
+     <pair>
+   </value-pairs>
 
  </form-value-pairs>
 
