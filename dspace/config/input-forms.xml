@@ -428,6 +428,17 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>downloadURL</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Distribution URL</label>
+          <input-type>onebox</input-type>
+          <hint>Where the data is available for download.</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
           <dc-schema>adms</dc-schema>
           <dc-element>representationTechnique</dc-element>
           <dc-qualifier></dc-qualifier>
@@ -535,14 +546,86 @@ it, please enter the types and the actual numbers or codes.</hint>
 
       </page>
 
-      <!-- <page number="4">
+      <page number="4">
 
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>license</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>License</label>
+          <input-type>onebox</input-type>
+          <hint>The license the dataset is released with.</hint>
+          <required>yes</required>
+        </field>
 
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>rights</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Rights</label>
+          <input-type>onebox</input-type>
+          <hint>Who holds rights on this dataset.</hint>
+          <required></required>
+        </field>
 
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>rights</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Rights</label>
+          <input-type>onebox</input-type>
+          <hint>Who holds rights on this dataset.</hint>
+          <required></required>
+        </field>
 
+        <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>contactPoint</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Data custodian</label>
+          <input-type>textArea</input-type>
+          <hint>The party or person, and its contact information, that specified the metadata information of this data. The value domain of this element is free text and should contain name, email and phone number.</hint>
+          <required>yes</required>
+        </field>
 
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>creator</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Data creator</label>
+          <input-type>textArea</input-type>
+          <hint>The party or person, and its contact information, that was or still is responsible for the creation of the data. The value domain of this element is free text and should contain name, email and phone number.</hint>
+          <required>yes</required>
+        </field>
 
-      </page> -->
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>publisher</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Data creator</label>
+          <input-type>textArea</input-type>
+          <hint>The party or person, and its contact information, that provides access and usage of the data. The value domain of this element is free text and should contain name, email and phone number.</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>contributor</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Other parties</label>
+          <input-type>textArea</input-type>
+          <hint>Other parties that are somehow related to this data. They could for example be the producers or funders for this data. For each party, its role and contact information should be given. The value domain of this element is free text.</hint>
+          <required></required>
+        </field>
+
+      </page>
     </form>
 
  </form-definitions>
