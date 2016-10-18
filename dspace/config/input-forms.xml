@@ -15,6 +15,7 @@
 
  <form-map>
    <name-map collection-handle="default" form-name="traditional" />
+   <name-map collection-handle="dataset" form-name="datasetform" />
  </form-map>
 
 
@@ -216,6 +217,334 @@ it, please enter the types and the actual numbers or codes.</hint>
        </field>
       </page>
     </form>
+
+    <form name="datasetform">
+      <page number="1">
+
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>title</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Title</label>
+          <input-type>onebox</input-type>
+          <hint>Enter the main title of the item.</hint>
+          <required>You must enter a main title for this item.</required>
+        </field>
+
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>identifier</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>ID</label>
+          <input-type>onebox</input-type>
+          <hint>The name of the data as a unique code. The code name should be as short as possible, but it should somehow be easy to recognise the dataset. Spaces and special characters are not allowed in the code name, except underscores “_”.</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>abstract</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Abstract</label>
+          <input-type>textarea</input-type>
+          <hint>Summarizes the characteristics of the data. This abstract is free text and may include any information, like for example information on the lineage of the data, the purpose of the data and the content of the data.</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>landingPage</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Dataset info URL</label>
+          <input-type>onebox</input-type>
+          <hint>For datasets (fill in Service info URL if this is a service): URL or other link to more information on the resource. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>foaf</dc-schema>
+          <dc-element>homepage</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Service info URL</label>
+          <input-type>onebox</input-type>
+          <hint>For services (fill in Dataset info URL if this is a service): URL or other link to more information on the resource. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>keyword</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Tags</label>
+          <input-type>onebox</input-type>
+          <hint>Tags classify datasets by subject keywords, e.g. "Amsterdam", "households", "drink water" and "consumption" for a dataset representing the drink water consumptions of households in Amsterdam.</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>theme</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Domain</label>
+          <input-type value-pairs-name="ams_themes">list</input-type>
+          <hint>The AMS theme(s) to which this dataset could be related. Can be more than one. Themes are prefixed: "Connected City", "Vital City", "Circular City".</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>subTheme</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Subdomain</label>
+          <input-type>onebox</input-type>
+          <hint>The AMS subtheme(s) to which this dataset could be related. Can be more than one.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedProject</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Projects</label>
+          <input-type>onebox</input-type>
+          <hint>The project(s) that used this dataset.</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>modified</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Date Metadata Modified</label>
+          <input-type>date</input-type>
+          <hint>The last date on which this metadata was formulated or updated. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>issued</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Date issued</label>
+          <input-type>date</input-type>
+          <hint>The date on which the dataset was published for the first time. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>created</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Date created</label>
+          <input-type>date</input-type>
+          <hint>The date on which the dataset was originally created. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>accrualPeriodicity</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Update frequency</label>
+          <input-type>onebox</input-type>
+          <hint>The time-interval in with this dataset normally is be updated. The value domain of this element is free text and for example: 'yearly', 'monthly', 'every 16 days'.</hint>
+          <required></required>
+        </field>
+
+      </page>
+      <page number="2">
+
+        <field>
+          <dc-schema>ngeo</dc-schema>
+          <dc-element>bbox</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Geographic bounds</label>
+          <input-type>name</input-type>
+          <hint>The spatial extent of the dataset in terms of geographical coordinates (x,y) describing the minimum and maximum values of x and y in the coordinate system specified by ‘spatial reference system’, i.e. defining (xmin, ymin, xmax, ymax).</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>temporal</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Period</label>
+          <input-type>onebox</input-type>
+          <hint>The time period that the dataset represents given as start date and end date, i.e. defining (startdate, enddate).
+            The dates should both be according to the ISO 8601 standard ('yyyy-mm-dd').</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>spatial</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Location</label>
+          <input-type>onebox</input-type>
+          <hint>The spatial extent of the dataset in terms of geographical naming, e.g. "The city centre of Amsterdam". The value domain of this element is free text.</hint>
+          <required>yes</required>
+        </field>
+
+      </page>
+
+      <page number="3">
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>type</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Type</label>
+          <input-type value-pairs-name="type_resource">dropdown</input-type>
+          <hint>The type of resource which is one of: 'Spatial data set (dataset)' or 'Spatial data services (services)'.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>format</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Distribution format</label>
+          <input-type>onebox</input-type>
+          <hint>In what file format is the data available for distribution, e.g. .txt for tables or for spatial vector data Shapefile, TAB or something else, and for raster data GeoTIFF, ASCII or something else.</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
+          <dc-schema>adms</dc-schema>
+          <dc-element>representationTechnique</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Spatial representation type</label>
+          <input-type value-pairs-name="spatial_type">dropdown</input-type>
+          <hint>How does the data represent the information, i.e. by 'points', 'polylines', 'polygons', 'raster' or 'flows'.
+            The type 'flows' means that the data contains information on resource flows, no matter how the flows are represented. If type 'flows' is chosen, metadata element 'Flow data type' is mandatory.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>temporalRepresentationType</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Temporal representation type</label>
+          <input-type value-pairs-name="temporal_type">dropdown</input-type>
+          <hint>Specifies whether the data represents the spatial data in time.
+            Can be 'dynamic' (variation in time) or 'static' (no time involved). If type 'dynamic' is chosen, metadata elements 'Temporal reference system' and 'Temporal resolution' are mandatory.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>conformsTo</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Coordinate reference system</label>
+          <input-type>onebox</input-type>
+          <hint>A description of the coordinate reference system used by the dataset, e.g. the coordinate system WGS84 or the projection. The value domain of this element is free text.</hint>
+          <required>yes</required>
+        </field>
+
+        <field>
+          <dc-schema>rdfs</dc-schema>
+          <dc-element>commment</dc-element>
+          <dc-qualifier>spatialResolution</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Spatial resolution</label>
+          <input-type>textarea</input-type>
+          <hint>The spatial resolution or level of detail in the spatial dimension.
+            In case of raster data this must be expressed as the raster cell size.
+            In case of vector data, the data importer must specify what the level of detail is. The value domain of this element is free text.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>conformsTo</dc-element>
+          <dc-qualifier>temporalReferenceSystem</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Temporal reference system</label>
+          <input-type>onebox</input-type>
+          <hint>Time reference system used by the dataset. Mandatory if Temporal representation type is 'dynamic'. The value domain of this element is free text.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>temporalResolution</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Temporal resolution</label>
+          <input-type>onebox</input-type>
+          <hint>The time interval or level of detail in the time dimension. Mandatory if Temporal representation type is 'dynamic'. The value domain of this element is free text.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>type</dc-element>
+          <dc-qualifier>spatialDataServiceType</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Temporal resolution</label>
+          <input-type value-pairs-name="temporal_resolution">dropdown</input-type>
+          <hint>The type of data service. Mandatory if the 'Resource type' is equal to 'Spatial data service'.
+            One has to select a type of service from the predefined list of service types defined by INSPIRE.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>adms</dc-schema>
+          <dc-element>representationTechnique</dc-element>
+          <dc-qualifier>flowDataType</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Flow data type</label>
+          <input-type>onebox</input-type>
+          <hint>How does the data represent the information of flows: (List of options must still be defined).
+            Mandatory if 'Spatial representation type' is equal to 'Flows'.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>language</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Language</label>
+          <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+          <hint>The language that is used in the resource to form textual data.
+            Mandatory if the data consists of textual data. List of possible languages is defined by the ISO standard 639-2.</hint>
+          <required></required>
+        </field>
+
+      </page>
+
+      <!-- <page number="4">
+
+
+
+
+
+
+      </page> -->
+    </form>
+
  </form-definitions>
 
 
@@ -400,6 +729,94 @@ it, please enter the types and the actual numbers or codes.</hint>
        <stored-value>other</stored-value>
      </pair>
    </value-pairs>
+
+   <value-pairs value-pairs-name="ams_themes" dc-term="theme">
+     <pair>
+       <displayed-value>Connected City</displayed-value>
+       <stored-value>connected_city</stored-value>
+      </pair>
+     <pair>
+       <displayed-value>Vital City</displayed-value>
+       <stored-value>vital_city</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Circular City</displayed-value>
+       <stored-value>circular_city</stored-value>
+     </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="type_resource" dc-term="type">
+     <pair>
+       <displayed-value>Spatial data set</displayed-value>
+       <stored-value>spatial_data_set</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Spatial data service</displayed-value>
+        <stored-value>spatial_data_service</stored-value>
+       </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="spatial_type" dc-term="representationTechnique">
+     <pair>
+       <displayed-value>Points</displayed-value>
+       <stored-value>points</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Polylines</displayed-value>
+        <stored-value>polylines</stored-value>
+      </pair>
+      <pair>
+         <displayed-value>Polygones</displayed-value>
+         <stored-value>polygones</stored-value>
+      </pair>
+      <pair>
+         <displayed-value>Raster</displayed-value>
+         <stored-value>raster</stored-value>
+      </pair>
+      <pair>
+         <displayed-value>Flows</displayed-value>
+         <stored-value>flows</stored-value>
+      </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="temporal_type" dc-term="temporalRepresentationType">
+     <pair>
+       <displayed-value>Dynamic</displayed-value>
+       <stored-value>dynamic</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Static</displayed-value>
+        <stored-value>static</stored-value>
+      </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="temporal_resolution" dc-term="type.spatialDataServiceType">
+     <pair>
+       <displayed-value>Discovery Service</displayed-value>
+       <stored-value>discovery_service</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Download Service</displayed-value>
+        <stored-value>download_service</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Invoke Spatial Data Service</displayed-value>
+        <stored-value>invoke_spatial_data_service</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Other Service</displayed-value>
+        <stored-value>other_service</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Transformation Service</displayed-value>
+        <stored-value>transformation_service</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>View Service</displayed-value>
+        <stored-value>view_service</stored-value>
+      </pair>
+   </value-pairs>
+
 
  </form-value-pairs>
 

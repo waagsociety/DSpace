@@ -8,11 +8,11 @@
   - Date:     $Date$
   -
   - DCTerms registry contributed to eventually replace dublin-core-types.xml
-  - 
+  -
   - <dc-type>
   -   <schema></schema>
   -   <element></element>
-  -   
+  -
   -   <scope_note></scope_note>
   - </dc-type>
   -->
@@ -95,6 +95,13 @@
 	<schema>dcterms</schema>
     <element>conformsTo</element>
     <scope_note>An established standard to which the described resource conforms.</scope_note>
+  </dc-type>
+
+  <dc-type>
+  <schema>dcterms</schema>
+    <element>conformsTo</element>
+    <qualifier>temporalReferenceSystem</qualifier>
+    <scope_note>An established temporal reference system to which the described resource conforms.</scope_note>
   </dc-type>
 
   <dc-type>
@@ -359,6 +366,13 @@
 	<schema>dcterms</schema>
     <element>type</element>
     <scope_note>The nature or genre of the resource.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>dcterms</schema>
+    <element>type</element>
+    <qualifier>spatialDataServiceType</qualifier>
+    <scope_note>The type of data service.</scope_note>
   </dc-type>
 
   <dc-type>

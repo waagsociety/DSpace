@@ -72,6 +72,13 @@
 
   <dc-type>
 	<schema>rdfs</schema>
+    <element>comment</element>
+    <qualifier>spatialResolution</qualifier>
+    <scope_note>The spatial resolution or level of detail in the spatial dimension.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>rdfs</schema>
     <element>seeAlso</element>
     <scope_note>rdfs:seeAlso is an instance of rdf:Property that is used to indicate a resource that might provide additional information about the subject resource.</scope_note>
   </dc-type>

@@ -59,6 +59,13 @@
   </dc-type>
 
   <dc-type>
+  <schema>adms</schema>
+    <element>representationTechnique</element>
+    <qualifier>flowDataType</qualifier>
+    <scope_note>How does the data represent the information of flows.</scope_note>
+  </dc-type>
+
+  <dc-type>
 	<schema>adms</schema>
     <element>status</element>
     <scope_note>Status of the Distribution in the context of a particular workflow process, using a controlled vocabulary.</scope_note>
