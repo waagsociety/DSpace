@@ -373,7 +373,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
           <label>Geographic bounds</label>
-          <input-type>name</input-type>
+          <input-type>onebox</input-type>
           <hint>The spatial extent of the dataset in terms of geographical coordinates (x,y) describing the minimum and maximum values of x and y in the coordinate system specified by ‘spatial reference system’, i.e. defining (xmin, ymin, xmax, ymax).</hint>
           <required></required>
         </field>
@@ -475,7 +475,7 @@ it, please enter the types and the actual numbers or codes.</hint>
 
         <field>
           <dc-schema>rdfs</dc-schema>
-          <dc-element>commment</dc-element>
+          <dc-element>comment</dc-element>
           <dc-qualifier>spatialResolution</dc-qualifier>
           <repeatable>false</repeatable>
           <label>Spatial resolution</label>
@@ -557,17 +557,6 @@ it, please enter the types and the actual numbers or codes.</hint>
           <input-type>onebox</input-type>
           <hint>The license the dataset is released with.</hint>
           <required>yes</required>
-        </field>
-
-        <field>
-          <dc-schema>dcterms</dc-schema>
-          <dc-element>rights</dc-element>
-          <dc-qualifier></dc-qualifier>
-          <repeatable>false</repeatable>
-          <label>Rights</label>
-          <input-type>onebox</input-type>
-          <hint>Who holds rights on this dataset.</hint>
-          <required></required>
         </field>
 
         <field>
@@ -874,6 +863,10 @@ it, please enter the types and the actual numbers or codes.</hint>
    </value-pairs>
 
    <value-pairs value-pairs-name="temporal_resolution" dc-term="type.spatialDataServiceType">
+     <pair>
+       <displayed-value>N/A</displayed-value>
+       <stored-value></stored-value>
+      </pair>
      <pair>
        <displayed-value>Discovery Service</displayed-value>
        <stored-value>discovery_service</stored-value>
