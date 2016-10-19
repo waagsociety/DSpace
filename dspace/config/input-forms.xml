@@ -16,8 +16,8 @@
  <form-map>
    <name-map collection-handle="default" form-name="traditional" />
    <name-map collection-handle="dataset" form-name="datasetform" />
-   <name-map collection-handle="project" form-name="projectform" />
    <name-map collection-handle="paper" form-name="paperform" />
+   <name-map collection-handle="project" form-name="projectform" />
  </form-map>
 
 
@@ -1183,16 +1183,14 @@ it, please enter the types and the actual numbers or codes.</hint>
      <pair>
        <displayed-value>Paper</displayed-value>
        <stored-value>paper</stored-value>
-      </pair>
-    </pair>
+     </pair>
    </value-pairs>
 
    <value-pairs value-pairs-name="project_type" dc-term="type">
      <pair>
        <displayed-value>Project</displayed-value>
        <stored-value>project</stored-value>
-      </pair>
-    </pair>
+     </pair>
    </value-pairs>
 
  </form-value-pairs>
