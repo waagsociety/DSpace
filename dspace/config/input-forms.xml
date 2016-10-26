@@ -530,8 +530,8 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
-          <dc-schema>dcterms</dc-schema>
-          <dc-element>abstract</dc-element>
+          <dc-schema>dc</dc-schema>
+          <dc-element>description</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
           <label>Abstract</label>
@@ -574,7 +574,7 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
-          <dc-schema>ams</dc-schema>
+          <dc-schema>dcat</dc-schema>
           <dc-element>theme</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
