@@ -883,7 +883,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-element>publisher</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Data creator</label>
+          <label>Data provider</label>
           <input-type>textarea</input-type>
           <hint>The party or person, and its contact information, that provides access and usage of the data. The value domain of this element is free text and should contain name, email and phone number.</hint>
           <required>yes</required>
