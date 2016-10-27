@@ -241,7 +241,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Abstract</label>
           <input-type>textarea</input-type>
           <hint>Summarizes the characteristics of the project.</hint>
-          <required>yes</required>
+          <required>You must enter an abstract</required>
         </field>
 
         <field>
@@ -253,7 +253,8 @@ it, please enter the types and the actual numbers or codes.</hint>
           <input-type>onebox</input-type>
           <hint>The time period that the project has or will be running as start date and end date, i.e. startdate, enddate.
             The dates should both be according to the ISO 8601 standard ('yyyy-mm-dd').</hint>
-          <required>yes</required>
+          <required>You must enter The time period that the project has or will be running as start date and end date, i.e. startdate, enddate.
+            The dates should both be according to the ISO 8601 standard ('yyyy-mm-dd').</required>
         </field>
 
         <field>
@@ -264,7 +265,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Type of item (predefined)</label>
           <input-type value-pairs-name="project_type">dropdown</input-type>
           <hint>Predefined field</hint>
-          <required>yes</required>
+          <required>This field is predefined</required>
         </field>
 
         <field>
@@ -332,11 +333,11 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-schema>dcterms</dc-schema>
           <dc-element>type</dc-element>
           <dc-qualifier></dc-qualifier>
-          <repeatable>true</repeatable>
+          <repeatable>false</repeatable>
           <label>Type of item (predefined)</label>
           <input-type value-pairs-name="paper_type">dropdown</input-type>
           <hint>Predefined field</hint>
-          <required>yes</required>
+          <required>This field is predefined</required>
         </field>
 
         <field>
@@ -421,7 +422,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Domain</label>
           <input-type value-pairs-name="ams_themes">list</input-type>
           <hint>The AMS theme(s) to which this paper could be related. Can be more than one. Themes are prefixed: "Connected City", "Vital City", "Circular City".</hint>
-          <required>yes</required>
+          <required>You must enter the AMS theme(s) to which this paper could be related.</required>
         </field>
 
         <field>
@@ -470,8 +471,8 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>ID</label>
           <input-type>onebox</input-type>
-          <hint>The name of the data as a unique code. The code name should be as short as possible, but it should somehow be easy to recognise the dataset. Spaces and special characters are not allowed in the code name, except underscores “_”.</hint>
-          <required>yes</required>
+          <hint>The identifier of the dataset as a unique code. The code name should be as short as possible, but it should somehow be easy to recognise the dataset. Spaces and special characters are not allowed in the code name, except underscores “_”.</hint>
+          <required>You must enter an identifier for the dataset.</required>
         </field>
 
         <field>
@@ -482,7 +483,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Abstract</label>
           <input-type>textarea</input-type>
           <hint>Summarizes the characteristics of the data. This abstract is free text and may include any information, like for example information on the lineage of the data, the purpose of the data and the content of the data.</hint>
-          <required>yes</required>
+          <required>You must enter an abstract for the dataset.</required>
         </field>
 
         <field>
@@ -515,7 +516,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Tags</label>
           <input-type>onebox</input-type>
           <hint>Tags classify datasets by subject keywords, e.g. "Amsterdam", "households", "drink water" and "consumption" for a dataset representing the drink water consumptions of households in Amsterdam.</hint>
-          <required>yes</required>
+          <required>You must enter tags for the dataset.</required>
         </field>
 
         <field>
@@ -526,7 +527,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Domain</label>
           <input-type value-pairs-name="ams_themes">list</input-type>
           <hint>The AMS theme(s) to which this dataset could be related. Can be more than one. Themes are prefixed: "Connected City", "Vital City", "Circular City".</hint>
-          <required>yes</required>
+          <required>You must enter the AMS theme(s) to which this dataset could be related.</required>
         </field>
 
         <field>
@@ -548,7 +549,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Related Projects</label>
           <input-type>onebox</input-type>
           <hint>The project(s) that used this dataset.</hint>
-          <required>yes</required>
+          <required>You must enter the AMS project that uses this dataset.</required>
         </field>
 
         <field>
@@ -559,7 +560,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Date Metadata Modified</label>
           <input-type>date</input-type>
           <hint>The last date on which this metadata was formulated or updated. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
-          <required>yes</required>
+          <required>You must enter the last date on which this metadata was formulated or updated.</required>
         </field>
 
         <field>
@@ -616,9 +617,9 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Period</label>
           <input-type>onebox</input-type>
-          <hint>The time period that the dataset represents given as start date and end date, i.e. defining (startdate, enddate).
+          <hint>The time period that the dataset covers given as start date and end date, i.e. defining (startdate, enddate).
             The dates should both be according to the ISO 8601 standard ('yyyy-mm-dd').</hint>
-          <required>yes</required>
+          <required>You must enter the time period that the dataset covers.</required>
         </field>
 
         <field>
@@ -629,7 +630,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Location</label>
           <input-type>onebox</input-type>
           <hint>The spatial extent of the dataset in terms of geographical naming, e.g. "The city centre of Amsterdam". The value domain of this element is free text.</hint>
-          <required>yes</required>
+          <required>You must enter the extent of the dataset such as "The city centre of Amsterdam".</required>
         </field>
 
       </page>
@@ -655,7 +656,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Distribution format</label>
           <input-type>onebox</input-type>
           <hint>In what file format is the data available for distribution, e.g. .txt for tables or for spatial vector data Shapefile, TAB or something else, and for raster data GeoTIFF, ASCII or something else.</hint>
-          <required>yes</required>
+          <required>You must enter the file format.</required>
         </field>
 
         <field>
@@ -666,7 +667,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Distribution URL</label>
           <input-type>onebox</input-type>
           <hint>Where the data is available for download.</hint>
-          <required>yes</required>
+          <required>You must enter the url of the location where the data is available for download.</required>
         </field>
 
         <field>
@@ -701,7 +702,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Coordinate reference system</label>
           <input-type>onebox</input-type>
           <hint>A description of the coordinate reference system used by the dataset, e.g. the coordinate system WGS84 or the projection. The value domain of this element is free text.</hint>
-          <required>yes</required>
+          <required>You must enter a description of the coordinate reference system used by the dataset.</required>
         </field>
 
         <field>
@@ -787,7 +788,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>License</label>
           <input-type>onebox</input-type>
           <hint>The license the dataset is released with.</hint>
-          <required>yes</required>
+          <required>You must indicate under what license the dataset is released.</required>
         </field>
 
         <field>
@@ -809,7 +810,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Data custodian</label>
           <input-type>textarea</input-type>
           <hint>The party or person, and its contact information, that specified the metadata information of this data. The value domain of this element is free text and should contain name, email and phone number.</hint>
-          <required>yes</required>
+          <required>You must indicate the contact information of the data custodian.</required>
         </field>
 
         <field>
@@ -820,7 +821,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Data creator</label>
           <input-type>textarea</input-type>
           <hint>The party or person, and its contact information, that was or still is responsible for the creation of the data. The value domain of this element is free text and should contain name, email and phone number.</hint>
-          <required>yes</required>
+          <required>You must indicate the contact information of the data creator.</required>
         </field>
 
         <field>
@@ -831,7 +832,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Data provider</label>
           <input-type>textarea</input-type>
           <hint>The party or person, and its contact information, that provides access and usage of the data. The value domain of this element is free text and should contain name, email and phone number.</hint>
-          <required>yes</required>
+          <required>You must indicate the contact information of the data provider.</required>
         </field>
 
         <field>
