@@ -378,6 +378,17 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>landingPage</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Paper info URL</label>
+          <input-type>onebox</input-type>
+          <hint>URL or other link to more information on the paper. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
+          <required></required>
+        </field>
+
+        <field>
           <dc-schema>dc</dc-schema>
           <dc-element>language</dc-element>
           <dc-qualifier>iso</dc-qualifier>
