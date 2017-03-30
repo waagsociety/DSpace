@@ -388,7 +388,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>true</repeatable>
           <label>Project members</label>
           <input-type>onebox</input-type>
-          <hint>Name, position and organization of the project member(s). The value domain of this element is free text and should contain name, email and phone number.</hint></hint>
+          <hint>Name, position and organization of the project member(s). The value domain of this element is free text and should contain name, email and phone number.</hint>
           <required>You must specify the project members of this project.</required>
         </field>
 
@@ -399,7 +399,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>true</repeatable>
           <label>Project partners</label>
           <input-type>onebox</input-type>
-          <hint>Name, position and organization of the project partner(s). The value domain of this element is free text and should contain name, email and phone number.</hint></hint>
+          <hint>Name, position and organization of the project partner(s). The value domain of this element is free text and should contain name, email and phone number.</hint>
           <required>You must specify the project partners of this project.</required>
         </field>
 
