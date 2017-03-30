@@ -108,8 +108,21 @@
 
   <dc-type>
 	<schema>ams</schema>
-    <element>sourceType</element>
-    <scope_note>The source (party) that created this item.</scope_note>
+    <element>projectLeader</element>
+    <scope_note>Name, position, organization and contact information of the project leader(s).</scope_note>
   </dc-type>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>projectMember</element>
+    <scope_note>Name, position and organization of project member.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>projectPartner</element>
+    <scope_note>Name, position and organization of project partner.</scope_note>
+  </dc-type>
+
 
 </dspace-dc-types>
