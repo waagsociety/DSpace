@@ -555,7 +555,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Related Projects</label>
           <input-type>onebox</input-type>
           <hint>The project(s) related to this tool.</hint>
-          <required></required>
+          <required>You must specify the project this tool is related to.</required>
         </field>
 
         <field>
@@ -634,6 +634,17 @@ it, please enter the types and the actual numbers or codes.</hint>
 
         <field>
           <dc-schema>dc</dc-schema>
+          <dc-element>title</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Title</label>
+          <input-type>onebox</input-type>
+          <hint>Enter the main title of the item.</hint>
+          <required>You must enter a main title for this item.</required>
+        </field>
+
+        <field>
+          <dc-schema>dc</dc-schema>
           <dc-element>creator</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
@@ -644,14 +655,14 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
-          <dc-schema>dc</dc-schema>
-          <dc-element>title</dc-element>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>abstract</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Title</label>
-          <input-type>onebox</input-type>
-          <hint>Enter the main title of the item.</hint>
-          <required>You must enter a main title for this item.</required>
+          <label>Abstract</label>
+          <input-type>textarea</input-type>
+          <hint>Summarizes the characteristics of the tool.</hint>
+          <required>You must enter an abstract</required>
         </field>
 
         <field>
@@ -666,65 +677,16 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
-          <dc-schema>dcterms</dc-schema>
-          <dc-element>issued</dc-element>
-          <dc-qualifier></dc-qualifier>
-          <repeatable>false</repeatable>
-          <label>Date of Issue</label>
-          <input-type>date</input-type>
-          <hint>Please give the date of previous publication or public distribution.
-                         You can leave out the day and/or month if they aren't
-                         applicable.</hint>
-          <required>You must enter at least the year.</required>
-        </field>
-
-        <field>
-          <dc-schema>dc</dc-schema>
-          <dc-element>publisher</dc-element>
-          <dc-qualifier></dc-qualifier>
-          <repeatable>false</repeatable>
-          <label>Publisher</label>
-          <input-type>onebox</input-type>
-          <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
-          <required></required>
-        </field>
-
-        <field>
-          <dc-schema>dc</dc-schema>
-          <dc-element>identifier</dc-element>
-          <dc-qualifier></dc-qualifier>
-          <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
-          <repeatable>true</repeatable>
-          <label>Identifiers</label>
-          <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-          <hint>If the item has any identification numbers or codes associated with
- it, please enter the types and the actual numbers or codes.</hint>
-          <required></required>
-        </field>
-	<field>
           <dc-schema>dcat</dc-schema>
           <dc-element>landingPage</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Paper info URL</label>
+          <label>Information link</label>
           <input-type>onebox</input-type>
-          <hint>URL or other link to more information on the paper. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
+          <hint>URL or other link to more information on the publication. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
           <required></required>
         </field>
 
-        <field>
-          <dc-schema>dc</dc-schema>
-          <dc-element>language</dc-element>
-          <dc-qualifier>iso</dc-qualifier>
-          <repeatable>false</repeatable>
-          <label>Language</label>
-          <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-          <hint>Select the language of the main content of the item.  If the language does not appear in the list, please select 'Other'.  If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.</hint>
-          <required></required>
-        </field>
-      </page>
-
-      <page number="2">
         <field>
           <dc-schema>dcat</dc-schema>
           <dc-element>keyword</dc-element>
@@ -739,35 +701,36 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
-          <dc-schema>dc</dc-schema>
-          <dc-element>description</dc-element>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>issued</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Abstract</label>
-          <input-type>textarea</input-type>
-          <hint>Enter the abstract of the item. </hint>
+          <label>Date issued</label>
+          <input-type>date</input-type>
+          <hint>The date on which the publication was published for the first time. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>created</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Date created</label>
+          <input-type>date</input-type>
+          <hint>The date on which the publication was originally created. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
           <required></required>
         </field>
 
         <field>
           <dc-schema>dcat</dc-schema>
-          <dc-element>theme</dc-element>
+          <dc-element>downloadURL</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
-          <label>Domain</label>
-          <input-type value-pairs-name="ams_themes">list</input-type>
-          <hint>The AMS theme(s) to which this paper could be related. Can be more than one. Themes are prefixed: "Connected City", "Vital City", "Circular City".</hint>
-          <required>You must enter the AMS theme(s) to which this paper could be related.</required>
-        </field>
-
-        <field>
-          <dc-schema>ams</dc-schema>
-          <dc-element>relatedDataset</dc-element>
-          <dc-qualifier></dc-qualifier>
-          <repeatable>true</repeatable>
-          <label>Related datasets</label>
+          <label>Publication own URI</label>
           <input-type>onebox</input-type>
-          <hint>The datasets this paper has used.</hint>
+          <hint>If exists, URI to where the publication can be downloaded. This is not the same as the information link, which is information about the publication.</hint>
+          <!-- <required>You must enter the url of the location where the data is available for download.</required> -->
           <required></required>
         </field>
 
@@ -776,11 +739,117 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-element>relatedProject</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
-          <label>Related projects</label>
+          <label>Related Projects</label>
           <input-type>onebox</input-type>
-          <hint>The projects this paper is related to.</hint>
+          <hint>The project(s) related to this publication.</hint>
+          <required>You must specify the project this publication is related to.</required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedTool</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Tools</label>
+          <input-type>onebox</input-type>
+          <hint>Tool(s) that have been used for this publication.</hint>
           <required></required>
         </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedPublication</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Publications</label>
+          <input-type>onebox</input-type>
+          <hint>Publication(s) that are related to this publication.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedDataset</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Datasets</label>
+          <input-type>onebox</input-type>
+          <hint>Dataset(s) that have used to produce this publication.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>contactPoint</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Publication custodian</label>
+          <input-type>textarea</input-type>
+          <hint>The party or person, and its contact information, that specified the metadata information of this publication. The value domain of this element is free text and should contain name, email and phone number.</hint>
+          <required>You must indicate the contact information of the tool custodian.</required>
+        </field>
+
+      </page>
+
+      <page number="2">
+
+      <field>
+        <dc-schema>dcterms</dc-schema>
+        <dc-element>type</dc-element>
+        <dc-qualifier>publication</dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Publication type</label>
+        <input-type>onebox</input-type>
+        <hint>The type of the publication such as peer-reviewed, etc.</hint>
+        <required>You must speficy the type of publication.</required>
+      </field>
+      
+        <!-- <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>publisher</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Publisher</label>
+          <input-type>onebox</input-type>
+          <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
+          <required></required>
+        </field> -->
+
+        <!-- <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>identifier</dc-element>
+          <dc-qualifier></dc-qualifier> -->
+          <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+          <!-- <repeatable>true</repeatable>
+          <label>Identifiers</label>
+          <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+          <hint>If the item has any identification numbers or codes associated with
+ it, please enter the types and the actual numbers or codes.</hint>
+          <required></required>
+        </field> -->
+
+
+        <!-- <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>theme</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Domain</label>
+          <input-type value-pairs-name="ams_themes">list</input-type>
+          <hint>The AMS theme(s) to which this paper could be related. Can be more than one. Themes are prefixed: "Connected City", "Vital City", "Circular City".</hint>
+          <required>You must enter the AMS theme(s) to which this paper could be related.</required>
+        </field> -->
+
+        <!-- <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>language</dc-element>
+          <dc-qualifier>iso</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Language</label>
+          <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+          <hint>Select the language of the main content of the item.  If the language does not appear in the list, please select 'Other'.  If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.</hint>
+          <required></required>
+        </field> -->
 
       </page>
     </form>
