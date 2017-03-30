@@ -734,7 +734,7 @@ it, please enter the types and the actual numbers or codes.</hint>
 
         <field>
           <dc-schema>ams</dc-schema>
-          <dc-element>dataUnits</dc-element>
+          <dc-element>fieldUnit</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
           <label>Data value units</label>
