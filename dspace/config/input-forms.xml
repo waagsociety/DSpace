@@ -15,9 +15,9 @@
 
  <form-map>
    <name-map collection-handle="default" form-name="traditional" />
-   <name-map collection-handle="dataset" form-name="datasetform" />
-   <name-map collection-handle="paper" form-name="paperform" />
-   <name-map collection-handle="project" form-name="projectform" />
+   <name-map collection-handle="10673/29875" form-name="datasetform" />
+   <name-map collection-handle="10673/29876" form-name="publicationform" />
+   <name-map collection-handle="10673/29877" form-name="projectform" />
  </form-map>
 
 
@@ -304,7 +304,7 @@ it, please enter the types and the actual numbers or codes.</hint>
       </page>
     </form>
 
-    <form name="paperform">
+    <form name="publicationform">
       <page number="1">
 
         <field>
@@ -335,7 +335,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
           <label>Type of item (predefined)</label>
-          <input-type value-pairs-name="paper_type">dropdown</input-type>
+          <input-type value-pairs-name="publication_type">dropdown</input-type>
           <hint>Predefined field</hint>
           <required>This field is predefined</required>
         </field>
@@ -376,8 +376,7 @@ it, please enter the types and the actual numbers or codes.</hint>
  it, please enter the types and the actual numbers or codes.</hint>
           <required></required>
         </field>
-
-        <field>
+	<field>
           <dc-schema>dcat</dc-schema>
           <dc-element>landingPage</dc-element>
           <dc-qualifier></dc-qualifier>
@@ -475,7 +474,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <required>You must enter a main title for this item.</required>
         </field>
 
-        <field>
+        <!-- <field>
           <dc-schema>dc</dc-schema>
           <dc-element>identifier</dc-element>
           <dc-qualifier></dc-qualifier>
@@ -484,7 +483,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <input-type>onebox</input-type>
           <hint>The identifier of the dataset as a unique code. The code name should be as short as possible, but it should somehow be easy to recognise the dataset. Spaces and special characters are not allowed in the code name, except underscores “_”.</hint>
           <required>You must enter an identifier for the dataset.</required>
-        </field>
+        </field> -->
 
         <field>
           <dc-schema>dc</dc-schema>
@@ -498,24 +497,24 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>type</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Type</label>
+          <input-type value-pairs-name="type_resource">dropdown</input-type>
+          <hint>Predefined field</hint>
+          <required>This field is predefined</required>
+        </field>
+
+        <field>
           <dc-schema>dcat</dc-schema>
           <dc-element>landingPage</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Dataset info URL</label>
+          <label>Information link</label>
           <input-type>onebox</input-type>
-          <hint>For datasets (fill in Service info URL if this is a service): URL or other link to more information on the resource. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
-          <required></required>
-        </field>
-
-        <field>
-          <dc-schema>foaf</dc-schema>
-          <dc-element>homepage</dc-element>
-          <dc-qualifier></dc-qualifier>
-          <repeatable>false</repeatable>
-          <label>Service info URL</label>
-          <input-type>onebox</input-type>
-          <hint>For services (fill in Dataset info URL if this is a service): URL or other link to more information on the resource. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
+          <hint>URL or other link to more information on the resource. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
           <required></required>
         </field>
 
@@ -524,13 +523,13 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-element>keyword</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
-          <label>Tags</label>
+          <label>Keywords</label>
           <input-type>onebox</input-type>
-          <hint>Tags classify datasets by subject keywords, e.g. "Amsterdam", "households", "drink water" and "consumption" for a dataset representing the drink water consumptions of households in Amsterdam.</hint>
-          <required>You must enter tags for the dataset.</required>
+          <hint>Keywords classify datasets by subject keywords, e.g. "Amsterdam", "households", "drink water" and "consumption" for a dataset representing the drink water consumptions of households in Amsterdam.</hint>
+          <required>You must enter keywords for the dataset.</required>
         </field>
 
-        <field>
+        <!-- <field>
           <dc-schema>dcat</dc-schema>
           <dc-element>theme</dc-element>
           <dc-qualifier></dc-qualifier>
@@ -550,20 +549,9 @@ it, please enter the types and the actual numbers or codes.</hint>
           <input-type>onebox</input-type>
           <hint>The AMS subtheme(s) to which this dataset could be related. Can be more than one.</hint>
           <required></required>
-        </field>
+        </field> -->
 
-        <field>
-          <dc-schema>ams</dc-schema>
-          <dc-element>relatedProject</dc-element>
-          <dc-qualifier></dc-qualifier>
-          <repeatable>true</repeatable>
-          <label>Related Projects</label>
-          <input-type>onebox</input-type>
-          <hint>The project(s) that used this dataset.</hint>
-          <required>You must enter the AMS project that uses this dataset.</required>
-        </field>
-
-        <field>
+        <!-- <field>
           <dc-schema>dcterms</dc-schema>
           <dc-element>modified</dc-element>
           <dc-qualifier></dc-qualifier>
@@ -572,7 +560,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <input-type>date</input-type>
           <hint>The last date on which this metadata was formulated or updated. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
           <required>You must enter the last date on which this metadata was formulated or updated.</required>
-        </field>
+        </field> -->
 
         <field>
           <dc-schema>dcterms</dc-schema>
@@ -597,18 +585,96 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
-          <dc-schema>dcterms</dc-schema>
-          <dc-element>accrualPeriodicity</dc-element>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>downloadURL</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Distribution URL</label>
+          <input-type>onebox</input-type>
+          <hint>Where the data is available for download.</hint>
+          <!-- <required>You must enter the url of the location where the data is available for download.</required> -->
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedProject</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Projects</label>
+          <input-type>onebox</input-type>
+          <hint>The project(s) that used this dataset.</hint>
+          <required>You must enter the AMS project that uses this dataset.</required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedTool</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Tools</label>
+          <input-type>onebox</input-type>
+          <hint>Tool(s) that can be used with the dataset.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedPublication</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Publications</label>
+          <input-type>onebox</input-type>
+          <hint>Publication(s) that have used the dataset.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedDataset</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Datasets</label>
+          <input-type>onebox</input-type>
+          <hint>Dataset(s) that are related to this dataset.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>contactPoint</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Update frequency</label>
-          <input-type>onebox</input-type>
-          <hint>The time-interval in with this dataset normally is be updated. The value domain of this element is free text and for example: 'yearly', 'monthly', 'every 16 days'.</hint>
-          <required></required>
+          <label>Data custodian</label>
+          <input-type>textarea</input-type>
+          <hint>The party or person, and its contact information, that specified the metadata information of this data. The value domain of this element is free text and should contain name, email and phone number.</hint>
+          <required>You must indicate the contact information of the data custodian.</required>
         </field>
 
       </page>
       <page number="2">
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>accessLevel</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Access level</label>
+          <input-type value-pairs-name="access_level">dropdown</input-type>
+          <hint>Whether this dataset is public, priviledged or restricted.</hint>
+          <required>You must indicate the access level of the dataset.</required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>sourceType</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Source type</label>
+          <input-type value-pairs-name="source_type">dropdown</input-type>
+          <hint>Whether this dataset has been generated by AMS, by a Partner or Harvested.</hint>
+          <required>You must indicate the source of the dataset.</required>
+        </field>
 
         <field>
           <dc-schema>ngeo</dc-schema>
@@ -644,19 +710,15 @@ it, please enter the types and the actual numbers or codes.</hint>
           <required>You must enter the extent of the dataset such as "The city centre of Amsterdam".</required>
         </field>
 
-      </page>
-
-      <page number="3">
-
         <field>
           <dc-schema>dcterms</dc-schema>
           <dc-element>type</dc-element>
-          <dc-qualifier></dc-qualifier>
+          <dc-qualifier>dataset</dc-qualifier>
           <repeatable>false</repeatable>
           <label>Type</label>
-          <input-type value-pairs-name="type_resource">dropdown</input-type>
-          <hint>The type of resource which is one of: 'Spatial data set (dataset)' or 'Spatial data services (services)'.</hint>
-          <required></required>
+          <input-type value-pairs-name="dataset_type_resource">dropdown</input-type>
+          <hint>The type of resource which is one of: 'Spatial' or 'Non-spatial'.</hint>
+          <required>You must indicate the type of the dataset.</required>
         </field>
 
         <field>
@@ -667,18 +729,18 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Distribution format</label>
           <input-type>onebox</input-type>
           <hint>In what file format is the data available for distribution, e.g. .txt for tables or for spatial vector data Shapefile, TAB or something else, and for raster data GeoTIFF, ASCII or something else.</hint>
-          <required>You must enter the file format.</required>
+          <required></required>
         </field>
 
         <field>
-          <dc-schema>dcat</dc-schema>
-          <dc-element>downloadURL</dc-element>
+          <dc-schema>ams</dc-schema>
+          <dc-element>dataUnits</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
-          <label>Distribution URL</label>
+          <label>Data value units</label>
           <input-type>onebox</input-type>
-          <hint>Where the data is available for download.</hint>
-          <required>You must enter the url of the location where the data is available for download.</required>
+          <hint>In what unit of measurement is the data expressed.</hint>
+          <required>You must enter the data measurement unit.</required>
         </field>
 
         <field>
@@ -713,7 +775,8 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Coordinate reference system</label>
           <input-type>onebox</input-type>
           <hint>A description of the coordinate reference system used by the dataset, e.g. the coordinate system WGS84 or the projection. The value domain of this element is free text.</hint>
-          <required>You must enter a description of the coordinate reference system used by the dataset.</required>
+          <!-- <required>You must enter a description of the coordinate reference system used by the dataset.</required> -->
+          <required></required>
         </field>
 
         <field>
@@ -753,25 +816,12 @@ it, please enter the types and the actual numbers or codes.</hint>
 
         <field>
           <dc-schema>dcterms</dc-schema>
-          <dc-element>type</dc-element>
-          <dc-qualifier>spatialDataServiceType</dc-qualifier>
+          <dc-element>accrualPeriodicity</dc-element>
+          <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Spatial data service type</label>
-          <input-type value-pairs-name="temporal_resolution">dropdown</input-type>
-          <hint>The type of data service. Mandatory if the 'Resource type' is equal to 'Spatial data service'.
-            One has to select a type of service from the predefined list of service types defined by INSPIRE.</hint>
-          <required></required>
-        </field>
-
-        <field>
-          <dc-schema>adms</dc-schema>
-          <dc-element>representationTechnique</dc-element>
-          <dc-qualifier>flowDataType</dc-qualifier>
-          <repeatable>false</repeatable>
-          <label>Flow data type</label>
+          <label>Update frequency</label>
           <input-type>onebox</input-type>
-          <hint>How does the data represent the information of flows: (List of options must still be defined).
-            Mandatory if 'Spatial representation type' is equal to 'Flows'.</hint>
+          <hint>The time-interval in with this dataset normally is be updated. The value domain of this element is free text and for example: 'yearly', 'monthly', 'every 16 days'.</hint>
           <required></required>
         </field>
 
@@ -784,12 +834,8 @@ it, please enter the types and the actual numbers or codes.</hint>
           <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
           <hint>The language that is used in the resource to form textual data.
             Mandatory if the data consists of textual data. List of possible languages is defined by the ISO standard 639-2.</hint>
-          <required></required>
+          <required>You must specify the language of the dataset.</required>
         </field>
-
-      </page>
-
-      <page number="4">
 
         <field>
           <dc-schema>dcterms</dc-schema>
@@ -810,18 +856,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>Rights</label>
           <input-type>onebox</input-type>
           <hint>Who holds rights on this dataset.</hint>
-          <required></required>
-        </field>
-
-        <field>
-          <dc-schema>dcat</dc-schema>
-          <dc-element>contactPoint</dc-element>
-          <dc-qualifier></dc-qualifier>
-          <repeatable>false</repeatable>
-          <label>Data custodian</label>
-          <input-type>textarea</input-type>
-          <hint>The party or person, and its contact information, that specified the metadata information of this data. The value domain of this element is free text and should contain name, email and phone number.</hint>
-          <required>You must indicate the contact information of the data custodian.</required>
+          <required>You must specify who holds rights on this dataset.</required>
         </field>
 
         <field>
@@ -856,6 +891,32 @@ it, please enter the types and the actual numbers or codes.</hint>
           <hint>Other parties that are somehow related to this data. They could for example be the producers or funders for this data. For each party, its role and contact information should be given. The value domain of this element is free text.</hint>
           <required></required>
         </field>
+
+
+        <!-- <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>type</dc-element>
+          <dc-qualifier>spatialDataServiceType</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Spatial data service type</label>
+          <input-type value-pairs-name="temporal_resolution">dropdown</input-type>
+          <hint>The type of data service. Mandatory if the 'Resource type' is equal to 'Spatial data service'.
+            One has to select a type of service from the predefined list of service types defined by INSPIRE.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>adms</dc-schema>
+          <dc-element>representationTechnique</dc-element>
+          <dc-qualifier>flowDataType</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Flow data type</label>
+          <input-type>onebox</input-type>
+          <hint>How does the data represent the information of flows: (List of options must still be defined).
+            Mandatory if 'Spatial representation type' is equal to 'Flows'.</hint>
+          <required></required>
+        </field> -->
+
 
       </page>
     </form>
@@ -1062,12 +1123,19 @@ it, please enter the types and the actual numbers or codes.</hint>
 
    <value-pairs value-pairs-name="type_resource" dc-term="type">
      <pair>
-       <displayed-value>Spatial data set</displayed-value>
-       <stored-value>spatial_data_set</stored-value>
+       <displayed-value>Dataset</displayed-value>
+       <stored-value>dataset</stored-value>
+      </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="dataset_type_resource" dc-term="type.dataset">
+     <pair>
+       <displayed-value>Spatial</displayed-value>
+       <stored-value>spatial</stored-value>
       </pair>
       <pair>
-        <displayed-value>Spatial data service</displayed-value>
-        <stored-value>spatial_data_service</stored-value>
+        <displayed-value>Non-spatial</displayed-value>
+        <stored-value>non-spatial</stored-value>
        </pair>
    </value-pairs>
 
@@ -1136,10 +1204,10 @@ it, please enter the types and the actual numbers or codes.</hint>
       </pair>
    </value-pairs>
 
-   <value-pairs value-pairs-name="paper_type" dc-term="type">
+   <value-pairs value-pairs-name="publication_type" dc-term="type">
      <pair>
-       <displayed-value>Paper</displayed-value>
-       <stored-value>paper</stored-value>
+       <displayed-value>Publication</displayed-value>
+       <stored-value>publication</stored-value>
      </pair>
    </value-pairs>
 
@@ -1149,6 +1217,37 @@ it, please enter the types and the actual numbers or codes.</hint>
        <stored-value>project</stored-value>
      </pair>
    </value-pairs>
+
+   <value-pairs value-pairs-name="access_level" dc-term="accessLevel">
+     <pair>
+       <displayed-value>Public</displayed-value>
+       <stored-value>public</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Priviledged</displayed-value>
+        <stored-value>priviledged</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Restricted</displayed-value>
+        <stored-value>restricted</stored-value>
+      </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="source_type" dc-term="sourceType">
+     <pair>
+       <displayed-value>AMS</displayed-value>
+       <stored-value>ams</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Partner</displayed-value>
+        <stored-value>partner</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Harvested</displayed-value>
+        <stored-value>harvested</stored-value>
+      </pair>
+   </value-pairs>
+
 
  </form-value-pairs>
 

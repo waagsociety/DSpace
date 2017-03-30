@@ -376,6 +376,13 @@
   </dc-type>
 
   <dc-type>
+  <schema>dcterms</schema>
+    <element>type</element>
+    <qualifier>dataset</qualifier>
+    <scope_note>The type of the dataset in terms of spatial/non-spatial.</scope_note>
+  </dc-type>
+
+  <dc-type>
 	<schema>dcterms</schema>
     <element>valid</element>
     <scope_note>Date (often a range) of validity of a resource.</scope_note>

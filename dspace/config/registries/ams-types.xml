@@ -55,19 +55,25 @@
   <dc-type>
 	<schema>ams</schema>
     <element>relatedProject</element>
-    <scope_note>The project(s) related to this dataset or paper.</scope_note>
-  </dc-type>
-
-  <dc-type>
-  <schema>ams</schema>
-    <element>relatedPaper</element>
-    <scope_note>The papers(s) related to this dataset.</scope_note>
+    <scope_note>The project(s) related to this item.</scope_note>
   </dc-type>
 
   <dc-type>
   <schema>ams</schema>
     <element>relatedDataset</element>
-    <scope_note>The dataset(s) related to this paper or project.</scope_note>
+    <scope_note>The dataset(s) related to this item.</scope_note>
+  </dc-type>
+
+  <dc-type>
+  <schema>ams</schema>
+    <element>relatedTool</element>
+    <scope_note>The tool(s) related to this item.</scope_note>
+  </dc-type>
+
+  <dc-type>
+  <schema>ams</schema>
+    <element>relatedPublication</element>
+    <scope_note>The publication(s) related to this item.</scope_note>
   </dc-type>
 
   <dc-type>
@@ -94,5 +100,16 @@
     <scope_note>The time interval or level of detail in the time dimension. The value domain of this element is free text.</scope_note>
   </dc-type>
 
+  <dc-type>
+	<schema>ams</schema>
+    <element>accessLevel</element>
+    <scope_note>The access level of this item.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>ams</schema>
+    <element>sourceType</element>
+    <scope_note>The source (party) that created this item.</scope_note>
+  </dc-type>
 
 </dspace-dc-types>
