@@ -377,7 +377,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>true</repeatable>
           <label>Project leader</label>
           <input-type>onebox</input-type>
-          <hint>Name, position, organization and contact information of the project leader(s). The value domain of this element is free text and should contain name, email and phone number.</hint></hint>
+          <hint>Name, position, organization and contact information of the project leader(s). The value domain of this element is free text and should contain name, email and phone number.</hint>
           <required>You must specify the project leader of this project.</required>
         </field>
 
