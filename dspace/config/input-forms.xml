@@ -18,6 +18,7 @@
    <name-map collection-handle="10673/29875" form-name="datasetform" />
    <name-map collection-handle="10673/29876" form-name="publicationform" />
    <name-map collection-handle="10673/29877" form-name="projectform" />
+   <name-map collection-handle="10673/59380" form-name="toolform" />
  </form-map>
 
 
@@ -274,7 +275,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>true</repeatable>
           <label>Keywords</label>
           <input-type>onebox</input-type>
-          <hint>Keywords classify project by subject keywords, e.g. "Amsterdam", "households", "drink water" and "consumption" for a project about drink water consumptions of households in Amsterdam.</hint>
+          <hint>Classify the project using subject keywords, e.g. "Amsterdam", "households", "drink water" and "consumption" for a project about drink water consumptions of households in Amsterdam.</hint>
           <required>You must enter keywords for the project.</required>
         </field>
 
@@ -305,9 +306,9 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-element>downloadURL</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
-          <label>Project owned URI</label>
+          <label>Project-own URI</label>
           <input-type>onebox</input-type>
-          <hint>If exists, URI to a project owned webpage. Not equal to information link!</hint>
+          <hint>If exists, URI to a project-own webpage. This is not the same as the information link, which is the AMS project page.</hint>
           <!-- <required>You must enter the url of the location where the data is available for download.</required> -->
           <required></required>
         </field>
@@ -449,6 +450,180 @@ it, please enter the types and the actual numbers or codes.</hint>
           <input-type>onebox</input-type>
           <hint>The AMS subtheme(s) to which this project is related. Can be more than one.</hint>
           <required>You must enter the AMS subtheme(s) to which this project is related.</required>
+        </field>
+
+      </page>
+    </form>
+
+    <form name="toolform">
+      <page number="1">
+
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>title</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Title</label>
+          <input-type>onebox</input-type>
+          <hint>Enter the title of the project.</hint>
+          <required>You must enter a main title for this item.</required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>abstract</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Abstract</label>
+          <input-type>textarea</input-type>
+          <hint>Summarizes the characteristics of the tool.</hint>
+          <required>You must enter an abstract</required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>type</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Type of item (predefined)</label>
+          <input-type value-pairs-name="tool_type">dropdown</input-type>
+          <hint>Predefined field</hint>
+          <required>This field is predefined</required>
+        </field>
+
+        <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>landingPage</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Information link</label>
+          <input-type>onebox</input-type>
+          <hint>URL or other link to more information on the tool. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>keyword</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Keywords</label>
+          <input-type>onebox</input-type>
+          <hint>Classify the tool using keywords.</hint>
+          <required>You must enter keywords for the tool.</required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>issued</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Date issued</label>
+          <input-type>date</input-type>
+          <hint>The date on which the tool was published for the first time. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcterms</dc-schema>
+          <dc-element>created</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Date created</label>
+          <input-type>date</input-type>
+          <hint>The date on which the tool was originally created. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>downloadURL</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Tool own URI</label>
+          <input-type>onebox</input-type>
+          <hint>If exists, URI to where the tool can be downloaded. This is not the same as the information link, which is information about the tool.</hint>
+          <!-- <required>You must enter the url of the location where the data is available for download.</required> -->
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedProject</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Projects</label>
+          <input-type>onebox</input-type>
+          <hint>The project(s) related to this tool.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedTool</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Tools</label>
+          <input-type>onebox</input-type>
+          <hint>Tool(s) that have been used together with this tool.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedPublication</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Publications</label>
+          <input-type>onebox</input-type>
+          <hint>Publication(s) that have produced with this tool.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>relatedDataset</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>true</repeatable>
+          <label>Related Datasets</label>
+          <input-type>onebox</input-type>
+          <hint>Dataset(s) that have processed by this tool.</hint>
+          <required></required>
+        </field>
+
+        <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>contactPoint</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Tool custodian</label>
+          <input-type>textarea</input-type>
+          <hint>The party or person, and its contact information, that specified the metadata information of this tool. The value domain of this element is free text and should contain name, email and phone number.</hint>
+          <required>You must indicate the contact information of the tool custodian.</required>
+        </field>
+
+      </page>
+      <page number="2">
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>accessLevel</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Access level</label>
+          <input-type value-pairs-name="access_level">dropdown</input-type>
+          <hint>Whether this tool is public, priviledged or restricted.</hint>
+          <required>You must indicate the access level of the tool.</required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>sourceType</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Source type</label>
+          <input-type value-pairs-name="source_type">dropdown</input-type>
+          <hint>Whether this tool has been generated by AMS, by a Partner or Harvested.</hint>
+          <required>You must indicate the source of the tool.</required>
         </field>
 
       </page>
@@ -675,7 +850,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>true</repeatable>
           <label>Keywords</label>
           <input-type>onebox</input-type>
-          <hint>Keywords classify datasets by subject keywords, e.g. "Amsterdam", "households", "drink water" and "consumption" for a dataset representing the drink water consumptions of households in Amsterdam.</hint>
+          <hint>Classify the dataset using subject keywords, e.g. "Amsterdam", "households", "drink water" and "consumption" for a dataset representing the drink water consumptions of households in Amsterdam.</hint>
           <required>You must enter keywords for the dataset.</required>
         </field>
 
@@ -1365,6 +1540,13 @@ it, please enter the types and the actual numbers or codes.</hint>
      <pair>
        <displayed-value>Project</displayed-value>
        <stored-value>project</stored-value>
+     </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="tool_type" dc-term="type">
+     <pair>
+       <displayed-value>Tool</displayed-value>
+       <stored-value>tool</stored-value>
      </pair>
    </value-pairs>
 
