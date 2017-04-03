@@ -18,7 +18,7 @@
  <!-- for handle "default".                                                -->
  <submission-map>
    <name-map collection-handle="default" submission-name="traditional" />
-   <name-map collection-handle="10673/29876" submission-name="no_fileupload_license" />
+   <!-- <name-map collection-handle="10673/29876" submission-name="no_fileupload_license" /> -->
    <name-map collection-handle="10673/29877" submission-name="no_fileupload_license" />
  </submission-map>
 

@@ -259,17 +259,6 @@ it, please enter the types and the actual numbers or codes.</hint>
 
         <field>
           <dc-schema>dcat</dc-schema>
-          <dc-element>landingPage</dc-element>
-          <dc-qualifier></dc-qualifier>
-          <repeatable>false</repeatable>
-          <label>Information link</label>
-          <input-type>onebox</input-type>
-          <hint>URL or other link to more information on the resource. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
-          <required></required>
-        </field>
-
-        <field>
-          <dc-schema>dcat</dc-schema>
           <dc-element>keyword</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
@@ -280,13 +269,24 @@ it, please enter the types and the actual numbers or codes.</hint>
         </field>
 
         <field>
+          <dc-schema>dcat</dc-schema>
+          <dc-element>landingPage</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Information link</label>
+          <input-type>onebox</input-type>
+          <hint>URL or other link to more information on the resource. The value domain is free text, but should only consist of a URL or other reference to an extern information page or system.</hint>
+          <required></required>
+        </field>
+
+        <field>
           <dc-schema>dcterms</dc-schema>
           <dc-element>issued</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
           <label>Date issued</label>
           <input-type>date</input-type>
-          <hint>The date on which the project was published for the first time. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <hint>The date on which the project was published for the first time. Please provide at least year and month.</hint>
           <required></required>
         </field>
 
@@ -297,7 +297,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Date created</label>
           <input-type>date</input-type>
-          <hint>The date on which the project was originally created. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <hint>The date on which the project was originally created. Please provide at least year and month.</hint>
           <required></required>
         </field>
 
@@ -320,7 +320,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>true</repeatable>
           <label>Related Projects</label>
           <input-type>onebox</input-type>
-          <hint>The project(s) related to this project.</hint>
+          <hint>The project(s) related to this project. Please provide the identifier if known (e.g. 10673/59390), or if not known please describe the project.</hint>
           <required></required>
         </field>
 
@@ -331,7 +331,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>true</repeatable>
           <label>Related Tools</label>
           <input-type>onebox</input-type>
-          <hint>Tool(s) that have been used with the project.</hint>
+          <hint>Tool(s) that have been used with the project. Please provide the identifier if known (e.g. 10673/59390), or if not known please describe the tool.</hint>
           <required></required>
         </field>
 
@@ -342,7 +342,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>true</repeatable>
           <label>Related Publications</label>
           <input-type>onebox</input-type>
-          <hint>Publication(s) that have produced in the scope of this project.</hint>
+          <hint>Publication(s) that have produced in the scope of this project.  Please provide the identifier if known (e.g. 10673/59390), or if not known please describe the publication.</hint>
           <required></required>
         </field>
 
@@ -362,10 +362,10 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-element>contactPoint</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Project custodian</label>
+          <label>Item custodian</label>
           <input-type>textarea</input-type>
           <hint>The party or person, and its contact information, that specified the metadata information of this project. The value domain of this element is free text and should contain name, email and phone number.</hint>
-          <required>You must indicate the contact information of the project custodian.</required>
+          <required>You must indicate the contact information of the item custodian.</required>
         </field>
 
       </page>
@@ -375,7 +375,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-schema>ams</dc-schema>
           <dc-element>projectLeader</dc-element>
           <dc-qualifier></dc-qualifier>
-          <repeatable>true</repeatable>
+          <repeatable>false</repeatable>
           <label>Project leader</label>
           <input-type>onebox</input-type>
           <hint>Name, position, organization and contact information of the project leader(s). The value domain of this element is free text and should contain name, email and phone number.</hint>
@@ -404,6 +404,17 @@ it, please enter the types and the actual numbers or codes.</hint>
           <required>You must specify the project partners of this project.</required>
         </field>
 
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>projectContact</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Project contact</label>
+          <input-type>onebox</input-type>
+          <hint>Name, position and organization of the project partner(s). The value domain of this element is free text and should contain name, email and phone number.</hint>
+          <required>You must specify the project contact of this project.</required>
+        </field>
 
         <field>
           <dc-schema>dcterms</dc-schema>
@@ -449,7 +460,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <label>AMS subtheme</label>
           <input-type>onebox</input-type>
           <hint>The AMS subtheme(s) to which this project is related. Can be more than one.</hint>
-          <required>You must enter the AMS subtheme(s) to which this project is related.</required>
+          <required></required>
         </field>
 
       </page>
@@ -611,7 +622,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Access level</label>
           <input-type value-pairs-name="access_level">dropdown</input-type>
-          <hint>Whether this tool is public, priviledged or restricted.</hint>
+          <hint>Whether this tool is public, privileged or restricted.</hint>
           <required>You must indicate the access level of the tool.</required>
         </field>
 
@@ -803,7 +814,7 @@ it, please enter the types and the actual numbers or codes.</hint>
         <hint>The type of the publication such as peer-reviewed, etc.</hint>
         <required>You must speficy the type of publication.</required>
       </field>
-      
+
         <!-- <field>
           <dc-schema>dc</dc-schema>
           <dc-element>publisher</dc-element>
@@ -983,7 +994,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-element>downloadURL</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
-          <label>Distribution URL</label>
+          <label>Source URI</label>
           <input-type>onebox</input-type>
           <hint>Where the data is available for download.</hint>
           <!-- <required>You must enter the url of the location where the data is available for download.</required> -->
@@ -1055,7 +1066,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Access level</label>
           <input-type value-pairs-name="access_level">dropdown</input-type>
-          <hint>Whether this dataset is public, priviledged or restricted.</hint>
+          <hint>Whether this dataset is public, privileged or restricted.</hint>
           <required>You must indicate the access level of the dataset.</required>
         </field>
 
@@ -1098,7 +1109,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-element>spatial</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Location</label>
+          <label>Geographical description</label>
           <input-type>onebox</input-type>
           <hint>The spatial extent of the dataset in terms of geographical naming, e.g. "The city centre of Amsterdam". The value domain of this element is free text.</hint>
           <required>You must enter the extent of the dataset such as "The city centre of Amsterdam".</required>
@@ -1467,6 +1478,10 @@ it, please enter the types and the actual numbers or codes.</hint>
        <stored-value>en</stored-value>
      </pair>
      <pair>
+       <displayed-value>Dutch</displayed-value>
+       <stored-value>nl</stored-value>
+     </pair>
+     <pair>
        <displayed-value>Spanish</displayed-value>
        <stored-value>es</stored-value>
      </pair>
@@ -1625,8 +1640,8 @@ it, please enter the types and the actual numbers or codes.</hint>
        <stored-value>public</stored-value>
       </pair>
       <pair>
-        <displayed-value>Priviledged</displayed-value>
-        <stored-value>priviledged</stored-value>
+        <displayed-value>Privileged</displayed-value>
+        <stored-value>privileged</stored-value>
       </pair>
       <pair>
         <displayed-value>Restricted</displayed-value>
