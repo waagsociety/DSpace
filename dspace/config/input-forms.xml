@@ -378,8 +378,19 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Project leader</label>
           <input-type>onebox</input-type>
-          <hint>Name, position, organization and contact information of the project leader(s). The value domain of this element is free text and should contain name, email and phone number.</hint>
+          <hint>Name, position, organization of the project leader(s). The value domain of this element is free text and should contain name, email and phone number.</hint>
           <required>You must specify the project leader of this project.</required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>projectContact</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Project contact</label>
+          <input-type>onebox</input-type>
+          <hint>Contact information of the project contact person. The value domain of this element is free text and should contain name, email and phone number.</hint>
+          <required>You must specify the contact information for this project.</required>
         </field>
 
         <field>
@@ -404,17 +415,6 @@ it, please enter the types and the actual numbers or codes.</hint>
           <required>You must specify the project partners of this project.</required>
         </field>
 
-
-        <field>
-          <dc-schema>ams</dc-schema>
-          <dc-element>projectContact</dc-element>
-          <dc-qualifier></dc-qualifier>
-          <repeatable>false</repeatable>
-          <label>Project contact</label>
-          <input-type>onebox</input-type>
-          <hint>Name, position and organization of the project partner(s). The value domain of this element is free text and should contain name, email and phone number.</hint>
-          <required>You must specify the project contact of this project.</required>
-        </field>
 
         <field>
           <dc-schema>dcterms</dc-schema>
@@ -531,7 +531,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Date issued</label>
           <input-type>date</input-type>
-          <hint>The date on which the tool was published for the first time. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <hint>The date on which the tool was published for the first time. Please provide at least year and month.</hint>
           <required></required>
         </field>
 
@@ -542,8 +542,19 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Date created</label>
           <input-type>date</input-type>
-          <hint>The date on which the tool was originally created. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <hint>The date on which the tool was originally created. Please provide at least year and month.</hint>
           <required></required>
+        </field>
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>accessInformation</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Access information</label>
+          <input-type>onebox</input-type>
+          <hint>Instructions on how to access the tool.</hint>
+          <required>You must enter the instructions on how to access the tool.</required>
         </field>
 
         <field>
@@ -718,7 +729,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Date issued</label>
           <input-type>date</input-type>
-          <hint>The date on which the publication was published for the first time. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <hint>The date on which the publication was published for the first time. Please provide at least year and month.</hint>
           <required></required>
         </field>
 
@@ -729,7 +740,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Date created</label>
           <input-type>date</input-type>
-          <hint>The date on which the publication was originally created. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <hint>The date on which the publication was originally created. Please provide at least year and month.</hint>
           <required></required>
         </field>
 
@@ -974,7 +985,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Date issued</label>
           <input-type>date</input-type>
-          <hint>The date on which the dataset was published for the first time. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <hint>The date on which the dataset was published for the first time. Please provide at least year and month.</hint>
           <required></required>
         </field>
 
@@ -985,8 +996,20 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>false</repeatable>
           <label>Date created</label>
           <input-type>date</input-type>
-          <hint>The date on which the dataset was originally created. The date should be according to the ISO 8601 standard: 'yyyy-mm-dd'.</hint>
+          <hint>The date on which the dataset was originally created. Please provide at least year and month.</hint>
           <required></required>
+        </field>
+
+
+        <field>
+          <dc-schema>ams</dc-schema>
+          <dc-element>accessInformation</dc-element>
+          <dc-qualifier></dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Access information</label>
+          <input-type>onebox</input-type>
+          <hint>Instructions on how to access the dataset.</hint>
+          <required>You must enter the instructions on how to access the dataset.</required>
         </field>
 
         <field>
