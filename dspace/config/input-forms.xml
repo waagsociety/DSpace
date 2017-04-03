@@ -306,7 +306,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-element>downloadURL</dc-element>
           <dc-qualifier></dc-qualifier>
           <repeatable>true</repeatable>
-          <label>Project-own URI</label>
+          <label>Source URI</label>
           <input-type>onebox</input-type>
           <hint>If exists, URI to a project-own webpage. This is not the same as the information link, which is the AMS project page.</hint>
           <!-- <required>You must enter the url of the location where the data is available for download.</required> -->
@@ -672,8 +672,8 @@ it, please enter the types and the actual numbers or codes.</hint>
           <repeatable>true</repeatable>
           <label>Authors</label>
           <input-type>name</input-type>
-          <hint>Enter the names of the authors of this item.</hint>
-          <required></required>
+          <hint>Enter the names of the authors of this publication.</hint>
+          <required>You must enter the authors of this publication.</required>
         </field>
 
         <field>
@@ -1276,7 +1276,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <required>You must indicate under what license the dataset is released.</required>
         </field>
 
-        <field>
+        <!-- <field>
           <dc-schema>dcterms</dc-schema>
           <dc-element>rights</dc-element>
           <dc-qualifier></dc-qualifier>
@@ -1285,7 +1285,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <input-type>onebox</input-type>
           <hint>Who holds rights on this dataset.</hint>
           <required>You must specify who holds rights on this dataset.</required>
-        </field>
+        </field> -->
 
         <field>
           <dc-schema>dc</dc-schema>

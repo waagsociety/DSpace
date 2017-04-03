@@ -129,5 +129,16 @@
     <element>projectContact</element>
     <scope_note>Contact information of the project contact person.</scope_note>
   </dc-type>
+  <dc-type>
+
+	<schema>ams</schema>
+    <element>projectContact</element>
+    <scope_note>Contact information of the project contact person.</scope_note>
+  </dc-type>
+
+  <schema>ams</schema>
+    <element>accessInformation</element>
+    <scope_note>Instruction on how to access the item.</scope_note>
+  </dc-type>
 
 </dspace-dc-types>
