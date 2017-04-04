@@ -1140,7 +1140,7 @@ it, please enter the types and the actual numbers or codes.</hint>
           <dc-element>type</dc-element>
           <dc-qualifier>dataset</dc-qualifier>
           <repeatable>false</repeatable>
-          <label>Type</label>
+          <label>Spatial representation</label>
           <input-type value-pairs-name="dataset_type_resource">dropdown</input-type>
           <hint>Specify whether the dataset is spatial or not.</hint>
           <required></required>
@@ -1557,6 +1557,10 @@ it, please enter the types and the actual numbers or codes.</hint>
    </value-pairs>
 
    <value-pairs value-pairs-name="dataset_type_resource" dc-term="type.dataset">
+     <pair>
+       <displayed-value>(-)</displayed-value>
+       <stored-value>notspeficied</stored-value>
+      </pair>
      <pair>
        <displayed-value>Spatial</displayed-value>
        <stored-value>spatial</stored-value>
