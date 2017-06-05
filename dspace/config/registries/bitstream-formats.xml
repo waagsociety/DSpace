@@ -733,5 +733,67 @@
       <extension>rdf</extension>
     </bitstream-type>
 
+    <bitstream-type>
+      <mimetype>application/rdf+xml; charset=utf-8</mimetype>
+      <short_description>RDF XML</short_description>
+      <description>RDF serialized in XML</description>
+      <support_level>1</support_level>
+      <internal>false</internal>
+      <extension>rdf</extension>
+    </bitstream-type>
+
+    <bitstream-type>
+      <mimetype>application/octet-stream</mimetype>
+      <short_description>Shapefile shape format</short_description>
+      <description>Shapefile feature geometry</description>
+      <support_level>1</support_level>
+      <internal>false</internal>
+      <extension>shp</extension>
+    </bitstream-type>
+
+    <bitstream-type>
+      <mimetype>application/octet-stream</mimetype>
+      <short_description>Shapefile shape index</short_description>
+      <description>Shapefile positional index of the feature geometry to allow seeking forwards and backwards quickly</description>
+      <support_level>1</support_level>
+      <internal>false</internal>
+      <extension>shx</extension>
+    </bitstream-type>
+
+    <bitstream-type>
+      <mimetype>application/octet-stream</mimetype>
+      <short_description>Shapefile attribute format</short_description>
+      <description>Shapefile columnar attributes for each shape, in dBase IV format</description>
+      <support_level>1</support_level>
+      <internal>false</internal>
+      <extension>dbf</extension>
+    </bitstream-type>
+
+    <bitstream-type>
+      <mimetype>text/plain; charset=utf-8</mimetype>
+      <short_description>Shapefile projection format</short_description>
+      <description>Shapefile the coordinate system and projection information, a plain text file describing the projection using well-known text format</description>
+      <support_level>1</support_level>
+      <internal>false</internal>
+      <extension>prj</extension>
+    </bitstream-type>
+
+    <bitstream-type>
+      <mimetype>text/plain; charset=utf-8</mimetype>
+      <short_description>Shapefile code page</short_description>
+      <description>Shapefile used to specify the code page (only for .dbf) for identifying the character encoding to be used</description>
+      <support_level>1</support_level>
+      <internal>false</internal>
+      <extension>cpg</extension>
+    </bitstream-type>
+
+    <bitstream-type>
+      <mimetype>text/xml</mimetype>
+      <short_description>Shapefile geospatial metadata</short_description>
+      <description>Shapefile geospatial metadata in XML format, such as ISO 19115 or other XML schema</description>
+      <support_level>1</support_level>
+      <internal>false</internal>
+      <extension>shp.xml</extension>
+    </bitstream-type>
 
 </dspace-bitstream-types>
