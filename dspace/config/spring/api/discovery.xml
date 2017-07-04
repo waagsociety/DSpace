@@ -407,15 +407,13 @@
     </bean>
 
     <!--Added for AMS-->
-    <bean id="searchFilterPublisher" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+    <bean id="searchFilterPublisher" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
         <property name="indexFieldName" value="publisher"/>
         <property name="metadataFields">
             <list>
                 <value>dc.publisher</value>
             </list>
         </property>
-        <property name="facetLimit" value="10"/>
-        <property name="sortOrder" value="COUNT"/>
     </bean>
 
     <!--Sort properties-->
